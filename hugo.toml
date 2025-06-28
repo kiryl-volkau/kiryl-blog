@@ -2,7 +2,6 @@ baseURL = 'https://kiryl-volkau.github.io/kiryl-blog/'
 languageCode = 'en-us'
 title = 'Kiryl Volkau Blog'
 theme = 'PaperMod'
-paginate = 10
 
 [params]
 ShowToc = true
