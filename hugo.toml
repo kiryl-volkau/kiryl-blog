@@ -4,10 +4,18 @@ title = 'Kiryl Volkau Blog'
 theme = 'PaperMod'
 
 [params]
-ShowToc = true
-ShowBreadCrumbs = true
-ShowReadingTime = true
-homeInfoParams = { Title = "Hi, I'm Kiryl!", Content = "Welcome to my blog. I write about software engineering." }
+    ShowToc = true
+    ShowBreadCrumbs = true
+    ShowReadingTime = true
+    homeInfoParams = { Title = "Hi, I'm Kiryl!", Content = "Welcome to my blog. I write about software engineering." }
+
+    [[params.socialIcons]]
+    name = "GitHub"
+    url = "https://github.com/kiryl-volkau"
+
+    [[params.socialIcons]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/kvolkau/"
 
 [caches]
     [caches.images]
