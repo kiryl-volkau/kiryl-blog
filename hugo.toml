@@ -1,0 +1,9 @@
+baseURL = 'https://kiryl-volkau.github.io/kiryl-blog/'
+languageCode = 'en-us'
+title = 'Kiryl Volkau Blog'
+theme = 'PaperMod'
+
+[params]
+ShowToc = true
+ShowBreadCrumbs = true
+ShowReadingTime = true
