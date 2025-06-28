@@ -9,3 +9,6 @@ ShowToc = true
 ShowBreadCrumbs = true
 ShowReadingTime = true
 homeInfoParams = { Title = "Hi, I'm Kiryl!", Content = "Welcome to my blog. I write about software engineering." }
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]

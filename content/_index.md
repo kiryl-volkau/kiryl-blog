@@ -1,7 +1,7 @@
 ---
-title: "Welcome to Kiryl's Blog"
+title: "Welcome"
 ---
 
-# Welcome!
+# Welcome to my blog!
 
-This is my blog about software engineering best practices.
+I write about software engineering best practices.

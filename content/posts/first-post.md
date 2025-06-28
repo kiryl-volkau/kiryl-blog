@@ -1,8 +1,10 @@
-+++
-date = '2025-06-28T13:09:52-04:00'
-draft = false
-title = 'First Post'
-+++
+---
+title: "First Post"
+date: 2025-06-28
+draft: false
+tags: ["best-practices"]
+categories: ["software-engineering"]
+---
 
 # Hello World
 
