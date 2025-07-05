@@ -4,6 +4,8 @@ title = 'Kiryl Volkau'
 theme = 'LoveIt'
 languageName = "English"
 
+googleAnalytics = "G-JWLM01WEG5"
+
 [pagination]
     disableAliases = false
     pagerSize = 10
