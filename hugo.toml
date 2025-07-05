@@ -70,6 +70,7 @@ languageName = "English"
 
         [params.analytics.google]
             id = "G-JWLM01WEG5"
+            anonymizeIP = true
 
 [markup]
     [markup.goldmark]
@@ -84,3 +85,7 @@ languageName = "English"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+page = ["HTML", "MarkDown"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+taxonomyTerm = ["HTML"]
