@@ -1,4 +1,4 @@
-baseURL = 'https://kiryl-volkau.github.io/kiryl-blog/'
+baseURL = 'https://kirillvolkov.com'
 languageCode = 'en-us'
 title = 'Kiryl Volkau'
 theme = 'LoveIt'
