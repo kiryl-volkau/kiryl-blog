@@ -16,7 +16,7 @@ languageName = "English"
         pre = ""
         post = ""
         name = "Home"
-        url = "/home/"
+        url = "/"
         title = ""
     [[menu.main]]
         weight = 2
@@ -34,11 +34,23 @@ languageName = "English"
     description = "Kiryl Volkau Blog"
     socialInHeader = true
     socialInFooter = true
+    dateFormat = "02-01-2006"
+
+    [params.home]
+        rss = 10
+
+        [params.home.profile]
+            enable = true
+            social = true
+            title = "Kiryl Volkau"
+            subtitle = "Senior Software Engineer | Java | Spring Enthusiast"
+
+        [params.home.posts]
+            enable = true
+            paginate = 6
 
     [params.author]
         name = "Kiryl Volkau"
-        email = ""
-        link = ""
 
     [params.header]
         [params.header.title]
@@ -50,14 +62,6 @@ languageName = "English"
         since = 2025
 
     [params.social]
-        [params.social.GitHub]
-            weight = 1
-            prefix = "https://github.com/"
-            id = "kiryl-volkau"
-        [params.social.LinkedIn]
-            weight = 2
-            prefix = "https://www.linkedin.com/in/"
-            id = "kvolkau"
         GitHub = "https://github.com/kiryl-volkau"
         Linkedin = "https://www.linkedin.com/in/kvolkau/"
 [markup]
