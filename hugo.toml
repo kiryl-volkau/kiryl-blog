@@ -4,8 +4,6 @@ title = 'Kiryl Volkau'
 theme = 'LoveIt'
 languageName = "English"
 
-googleAnalytics = "G-JWLM01WEG5"
-
 [pagination]
     disableAliases = false
     pagerSize = 10
@@ -66,6 +64,13 @@ googleAnalytics = "G-JWLM01WEG5"
     [params.social]
         GitHub = "https://github.com/kiryl-volkau"
         Linkedin = "https://www.linkedin.com/in/kvolkau/"
+
+    [params.analytics]
+        enable = true
+
+        [params.analytics.google]
+            id = "G-JWLM01WEG5"
+
 [markup]
     [markup.goldmark]
         [markup.goldmark.renderer]
