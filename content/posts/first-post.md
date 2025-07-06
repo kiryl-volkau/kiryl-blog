@@ -1,9 +1,9 @@
 ---
 title: "How I Became a Senior Pomidor 🍅"
 date: 2025-07-05T10:00:00-04:00
-draft: false
-tags: ["Java", "Spring", "Best Practices"]
-categories: ["Backend"]
+draft: true
+#tags: ["Java", "Spring", "Best Practices"]
+#categories: ["Backend"]
 ---
 
 Welcome to my first blog post!
