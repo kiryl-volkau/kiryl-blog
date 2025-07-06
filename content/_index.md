@@ -3,15 +3,12 @@ title: "Hi, I'm Kiryl!"
 layout: "home"
 ---
 
-## Senior Pomidor 🍅
-
 {{< profile >}}
 
 
-<br>Welcome to my personal blog where I share my thoughts, best practices, and real-world experience in software engineering.<br>
+<br>Hi! 👋 I’m Kiryl Volkau, a software engineer based in Austin, Texas.<br>
 
-<br>Mostly Java, Spring, and the things that just work.<br>
+<br>I specialize in Java and Spring Boot. I build scalable, reliable, and well-architected backend systems. I've worked on projects of all sizes — from startups to large enterprises like JPMorgan Chase.<br>
 
-<br>When I'm not coding, I'm probably somewhere riding my motorcycle or drinking coffee like it's my second job.<br>
 
 {{< /profile >}}
