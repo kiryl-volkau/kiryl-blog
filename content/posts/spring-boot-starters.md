@@ -1,5 +1,5 @@
 +++
-date = '2025-07-06T11:21:44-04:00'
+date = '2025-07-06'
 draft = false
 title = 'Spring Boot Starters'
 +++
