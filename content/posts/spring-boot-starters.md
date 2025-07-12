@@ -5,6 +5,7 @@ title = 'Spring Boot Starters'
 +++
 
 # Spring Boot Starters
+> _Ever wondered why adding `spring-boot-starter-web` or `spring-boot-starter-data-jpa` just makes things work? Let's break down what Starters actually do and why they're so powerful._
 
 When I first started working with Spring, I was always wondering:  
 What is `spring-cloud-starter-openfeign`?  
@@ -13,19 +14,18 @@ What is `spring-boot-starter-web`?
 At first glance, they just seemed like convenient libraries with some pre-made configuration. But actually, they are
 what makes Spring Boot fast, easy to use, and help keep your `pom.xml` clean.
 
-Early in my career, I didn’t think much about what was happening under the hood. I just added `spring-boot-starter-web`
-and created REST controllers — without even asking myself how it really works.
+Early in my career, I didn't think much about what was happening under the hood. I just added `spring-boot-starter-web`
+and created REST controllers, without even asking myself how it really works.
 
 In this post, I want to talk more about Spring Boot Starters:
 
 - How they work
 - Why they are valuable
-- How to create your own Spring Boot Starter
 
 ## What is Spring Boot Starter ? 
 
 Spring Boot Starters are ready-to-use sets of dependencies that you can quickly add to your project. They give you
-everything you need to start working with Spring and related tools — without searching for examples or adding each
+everything you need to start working with Spring and related tools, without searching for examples or adding each
 dependency manually.
 
 For example, if you want to use Spring with JPA for database access, you just add the `spring-boot-starter-data-jpa` to
@@ -33,19 +33,39 @@ your project, and you’re ready to go.
 
 ### How do starters actually work?
 
-Spring Boot Starters themselves don’t contain any logic — they are just dependency aggregators.
+Spring Boot Starters themselves don’t contain any logic, and they are just dependency aggregators.
 
-The real functionality comes from Spring Boot’s **auto-configuration mechanism**, which is enabled by default. When your application starts, Spring looks for classes listed in `META-INF/spring.factories` (or `spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports` in newer versions) and loads them based on the context.
+The real functionality comes from Spring Boot’s **autoconfiguration mechanism**, which is enabled by default. When your application starts, Spring looks for classes listed in `META-INF/spring.factories` (or `spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports` in newer versions) and loads them based on the context.
 
 ### Before Auto-Configuration
 
 Before Spring Boot, Java configuration was manual and repetitive:
 
+```java
+// Classic Spring: Java config for web app
+@Bean
+public DispatcherServlet dispatcherServlet() {
+    DispatcherServlet servlet = new DispatcherServlet();
+    // manual config...
+    return servlet;
+}
+
+// XML example (web.xml)
+<servlet>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>/</url-pattern>
+</servlet-mapping>
+```
+
 * You had to define `DispatcherServlet`, set servlet mappings
 * Configure `ViewResolver`, message converters, and `@EnableWebMvc`
 * Register filters and listeners in `web.xml`
 
-Auto-configuration eliminates all of this, using conditional logic and defaults. This is one of the reasons Spring Boot took off — it lets developers focus on business logic instead of boilerplate.
+Auto-configuration eliminates all of this, using conditional logic and defaults. This is one of the reasons Spring Boot took off. It lets developers focus on business logic instead of boilerplate.
 
 ### What's inside `spring-boot-starter-web` (Spring Boot 3)
 
@@ -83,11 +103,11 @@ public class DispatcherServletAutoConfiguration {
 }
 ```
 
-Let’s break down these annotations in more detail:
+Let's break down these annotations in more detail:
 
 * `@AutoConfiguration`
 
-    * Marks the class as an auto-configuration candidate.
+    * Marks the class as an autoconfiguration candidate.
     * Spring Boot uses this annotation (instead of just `@Configuration`) to include the class via `spring.factories` or `AutoConfiguration.imports`.
 
 * `@AutoConfigureOrder(Ordered.HIGHEST_PRECEDENCE)`
@@ -98,7 +118,7 @@ Let’s break down these annotations in more detail:
         * `Ordered.HIGHEST_PRECEDENCE` (runs first)
         * `Ordered.LOWEST_PRECEDENCE` (runs last)
         * Or any custom integer value
-    * This ordering matters when you have overlapping beans or you want something to happen early.
+    * This ordering matters when you have overlapping beans, or you want something to happen early.
 
 * `@ConditionalOnWebApplication(type = Type.SERVLET)`
 
@@ -128,7 +148,7 @@ These annotations represent Spring Boot's **declarative and conditional approach
 
 So far we've looked at how existing starters work. In the next article, we'll explore how to create your own Spring Boot Starter — for example, a custom Feign client starter that auto-registers external service clients with preconfigured settings.
 
-Topics we’ll cover:
+Topics we'll cover:
 
 * How to structure your starter project
 * How to use `@AutoConfiguration` to register your beans
@@ -138,7 +158,3 @@ Topics we’ll cover:
 ## Thanks for reading!
 
 Thank you! I hope this post gave you an understanding of how Spring Boot starters actually work under the hood.
-
-Feel free to share your thoughts or questions — and don't forget to check back for Part 2, where we'll build our own starter from scratch.
-
-
