@@ -62,8 +62,8 @@ languageName = "English"
         since = 2025
 
     [params.social]
-        GitHub = "https://github.com/kiryl-volkau"
-        Linkedin = "https://www.linkedin.com/in/kvolkau/"
+        GitHub = "kiryl-volkau"
+        Linkedin = "kvolkau"
 
     [params.analytics]
         enable = true
