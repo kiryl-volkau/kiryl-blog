@@ -72,23 +72,28 @@ languageName = "English"
             id = "G-JWLM01WEG5"
             anonymizeIP = true
 
-    [params.page.comment]
-        enable = true
+    [params.page]
+        [params.page.library]
+            [params.page.library.css]
+            [params.page.library.js]
 
-        [params.page.comment.giscus]
+        [params.page.comment]
             enable = true
-            repo = "kiryl-volkau/kiryl-blog"
-            repoId = "R_kgDOPDcqVg"
-            category = "Announcements"
-            categoryId = "DIC_kwDOPDcqVs4Cs3uf"
-            lang = ""
-            mapping = "pathname"
-            reactionsEnabled = "1"
-            emitMetadata = "0"
-            inputPosition = "bottom"
-            lazyLoading = false
-            lightTheme = "light"
-            darkTheme = "dark"
+
+            [params.page.comment.giscus]
+                enable = true
+                repo = "kiryl-volkau/kiryl-blog"
+                repoId = "R_kgDOPDcqVg"
+                category = "Announcements"
+                categoryId = "DIC_kwDOPDcqVs4Cs3uf"
+                lang = ""
+                mapping = "pathname"
+                reactionsEnabled = "1"
+                emitMetadata = "0"
+                inputPosition = "bottom"
+                lazyLoading = false
+                lightTheme = "light"
+                darkTheme = "dark"
 
 [markup]
     [markup.goldmark]
